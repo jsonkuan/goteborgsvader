@@ -28,6 +28,8 @@ class HomeViewController: UIViewController {
 		}
 	}
 	
+	// MARK: - Private helper methods
+	
 	private func setIcon(icon: String) {
 		switch icon {
 		case "snow", "sleet":
@@ -40,6 +42,15 @@ class HomeViewController: UIViewController {
 			 	"wind", "fog", "cloudy", "clear-day", "clear-night", "partly-cloudy-day", "partly-cloudy-night"
 			*/
 		}
+	}
+
+	
+	// MARK: - Navigation
+	
+	override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+	
+		let destination = segue.destination as! OtherViewController
+		destination.weatherData = self.weatherData
 	}
 
 }

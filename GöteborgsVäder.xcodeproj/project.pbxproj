@@ -16,6 +16,7 @@
 		1522A0F92051342D0061BED3 /* NetworkHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1522A0F82051342D0061BED3 /* NetworkHandler.swift */; };
 		1522A0FB2051366F0061BED3 /* APIConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1522A0FA2051366F0061BED3 /* APIConfig.swift */; };
 		153AC552205140D9004B935E /* CurrentWeather.swift in Sources */ = {isa = PBXBuildFile; fileRef = 153AC551205140D9004B935E /* CurrentWeather.swift */; };
+		153AC55420514925004B935E /* OtherViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 153AC55320514925004B935E /* OtherViewController.swift */; };
 		F0C5849D90EF8AD986214C1B /* Pods_Go_teborgsVa_der.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0236014E85BCFE8A3FD34336 /* Pods_Go_teborgsVa_der.framework */; };
 /* End PBXBuildFile section */
 
@@ -32,6 +33,7 @@
 		1522A0F82051342D0061BED3 /* NetworkHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkHandler.swift; sourceTree = "<group>"; };
 		1522A0FA2051366F0061BED3 /* APIConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIConfig.swift; sourceTree = "<group>"; };
 		153AC551205140D9004B935E /* CurrentWeather.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentWeather.swift; sourceTree = "<group>"; };
+		153AC55320514925004B935E /* OtherViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OtherViewController.swift; sourceTree = "<group>"; };
 		18C716403D7780FBDE39CE2C /* Pods-GöteborgsVäder.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GöteborgsVäder.release.xcconfig"; path = "Pods/Target Support Files/Pods-GöteborgsVäder/Pods-GöteborgsVäder.release.xcconfig"; sourceTree = "<group>"; };
 		2C60AF49688D64F69F5F349A /* Pods-GöteborgsVäder.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GöteborgsVäder.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GöteborgsVäder/Pods-GöteborgsVäder.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -103,6 +105,7 @@
 			isa = PBXGroup;
 			children = (
 				1522A0E220512A080061BED3 /* HomeViewController.swift */,
+				153AC55320514925004B935E /* OtherViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -263,6 +266,7 @@
 			files = (
 				1522A0E320512A080061BED3 /* HomeViewController.swift in Sources */,
 				1522A0E120512A080061BED3 /* AppDelegate.swift in Sources */,
+				153AC55420514925004B935E /* OtherViewController.swift in Sources */,
 				1522A0F6205130090061BED3 /* WeatherData.swift in Sources */,
 				1522A0F92051342D0061BED3 /* NetworkHandler.swift in Sources */,
 				153AC552205140D9004B935E /* CurrentWeather.swift in Sources */,
