@@ -16,6 +16,12 @@ class HomeViewController: UIViewController {
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		
+		let handler = NetworkHandler()
+		handler.getWeatherData(lat: 57.7089, long: 11.9746) { data in
+			print("Lat: \(data.latitude)")
+			print("Summary: \(data.currently.summary)")
+		}
+		
 	}
 
 }

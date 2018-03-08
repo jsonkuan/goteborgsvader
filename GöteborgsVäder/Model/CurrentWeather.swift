@@ -1,5 +1,5 @@
 //
-//  weatherData.swift
+//  CurrentWeather.swift
 //  GöteborgsVäder
 //
 //  Created by Jason Kuan on 2018-03-08.
@@ -8,9 +8,7 @@
 
 import Foundation
 
-struct WeatherData: Codable {
-	
-	let latitude: Double
-	let currently: CurrentWeather
-	
+struct CurrentWeather: Codable {
+
+	let summary: String
 }
