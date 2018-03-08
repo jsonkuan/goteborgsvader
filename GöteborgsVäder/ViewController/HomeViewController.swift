@@ -13,15 +13,33 @@ class HomeViewController: UIViewController {
 	@IBOutlet weak var weatherIcon: UIImageView!
 	@IBOutlet weak var weatherLabel: UILabel!
 	
+	let handler = NetworkHandler()
+	var weatherData: WeatherData?
+	
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		
-		let handler = NetworkHandler()
 		handler.getWeatherData(lat: 57.7089, long: 11.9746) { data in
-			print("Lat: \(data.latitude)")
-			print("Summary: \(data.currently.summary)")
+			self.weatherLabel.text = data.currently.summary
+			self.weatherData = data
+			
+			print(data.currently.icon)
+			self.setIcon(icon: data.currently.icon)
 		}
-		
+	}
+	
+	private func setIcon(icon: String) {
+		switch icon {
+		case "snow", "sleet":
+			weatherIcon.image = #imageLiteral(resourceName: "Snow")
+		case "rain":
+			weatherIcon.image = #imageLiteral(resourceName: "rain")
+		default:
+			weatherIcon.image = #imageLiteral(resourceName: "rain")
+			/* Additional cases to handle:
+			 	"wind", "fog", "cloudy", "clear-day", "clear-night", "partly-cloudy-day", "partly-cloudy-night"
+			*/
+		}
 	}
 
 }
