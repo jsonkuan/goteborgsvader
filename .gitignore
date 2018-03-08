@@ -3,7 +3,7 @@
 
 ### Config files ###
 
-*APIConfig
+*APIConfig.swift
 
 ### macOS ###
 *.DS_Store
