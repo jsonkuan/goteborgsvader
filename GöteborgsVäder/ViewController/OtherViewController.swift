@@ -11,14 +11,13 @@ import UIKit
 class OtherViewController: UIViewController {
 
 	@IBOutlet weak var weatherIcon: UIImageView!
-	@IBOutlet weak var weatherLabel: UILabel!
 	
 	var weatherData: WeatherData!
 	
     override func viewDidLoad() {
         super.viewDidLoad()
 		
-		self.weatherLabel.text = "hej: \(weatherData.latitude)"
+//		self.weatherLabel.text = "hej: \(weatherData.latitude)"
     }
 	
 }

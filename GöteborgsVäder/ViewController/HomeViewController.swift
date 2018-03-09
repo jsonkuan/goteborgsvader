@@ -33,14 +33,25 @@ class HomeViewController: UIViewController {
 	private func setIcon(icon: String) {
 		switch icon {
 		case "snow", "sleet":
-			weatherIcon.image = #imageLiteral(resourceName: "Snow")
+			weatherIcon.image = #imageLiteral(resourceName: "snow")
 		case "rain":
 			weatherIcon.image = #imageLiteral(resourceName: "rain")
+		case "cloudy":
+			weatherIcon.image = #imageLiteral(resourceName: "cloudy")
+		case "partly-cloudy-day":
+			weatherIcon.image = #imageLiteral(resourceName: "partly_cloudy_day")
+		case "partly-cloudy-night":
+			weatherIcon.image = #imageLiteral(resourceName: "partly_cloudy_night")
+		case "wind":
+			weatherIcon.image = #imageLiteral(resourceName: "windy")
+		case "fog":
+			weatherIcon.image = #imageLiteral(resourceName: "foggy")
+		case "clear-day":
+			weatherIcon.image = #imageLiteral(resourceName: "sunny")
+		case "clear-night":
+			weatherIcon.image = #imageLiteral(resourceName: "clear_night")
 		default:
-			weatherIcon.image = #imageLiteral(resourceName: "rain")
-			/* Additional cases to handle:
-			 	"wind", "fog", "cloudy", "clear-day", "clear-night", "partly-cloudy-day", "partly-cloudy-night"
-			*/
+			weatherIcon.image = #imageLiteral(resourceName: "rain_icon")
 		}
 	}
 
