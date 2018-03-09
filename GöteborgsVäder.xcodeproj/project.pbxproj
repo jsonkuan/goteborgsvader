@@ -17,6 +17,8 @@
 		1522A0FB2051366F0061BED3 /* APIConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1522A0FA2051366F0061BED3 /* APIConfig.swift */; };
 		153AC552205140D9004B935E /* CurrentWeather.swift in Sources */ = {isa = PBXBuildFile; fileRef = 153AC551205140D9004B935E /* CurrentWeather.swift */; };
 		153AC55420514925004B935E /* OtherViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 153AC55320514925004B935E /* OtherViewController.swift */; };
+		153AC55620530275004B935E /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 153AC55520530275004B935E /* Location.swift */; };
+		153AC55920531BE8004B935E /* Converter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 153AC55820531BE8004B935E /* Converter.swift */; };
 		F0C5849D90EF8AD986214C1B /* Pods_Go_teborgsVa_der.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0236014E85BCFE8A3FD34336 /* Pods_Go_teborgsVa_der.framework */; };
 /* End PBXBuildFile section */
 
@@ -34,6 +36,8 @@
 		1522A0FA2051366F0061BED3 /* APIConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIConfig.swift; sourceTree = "<group>"; };
 		153AC551205140D9004B935E /* CurrentWeather.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentWeather.swift; sourceTree = "<group>"; };
 		153AC55320514925004B935E /* OtherViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OtherViewController.swift; sourceTree = "<group>"; };
+		153AC55520530275004B935E /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
+		153AC55820531BE8004B935E /* Converter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Converter.swift; sourceTree = "<group>"; };
 		18C716403D7780FBDE39CE2C /* Pods-GöteborgsVäder.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GöteborgsVäder.release.xcconfig"; path = "Pods/Target Support Files/Pods-GöteborgsVäder/Pods-GöteborgsVäder.release.xcconfig"; sourceTree = "<group>"; };
 		2C60AF49688D64F69F5F349A /* Pods-GöteborgsVäder.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GöteborgsVäder.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GöteborgsVäder/Pods-GöteborgsVäder.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -75,6 +79,7 @@
 				1522A0E020512A080061BED3 /* AppDelegate.swift */,
 				1522A0E420512A080061BED3 /* Main.storyboard */,
 				1522A0E920512A080061BED3 /* LaunchScreen.storyboard */,
+				153AC55720531BD2004B935E /* Helper */,
 				1522A0F7205133B60061BED3 /* Networking */,
 				1522A0F320512E710061BED3 /* View */,
 				1522A0F420512E770061BED3 /* ViewController */,
@@ -90,6 +95,7 @@
 			children = (
 				1522A0F5205130090061BED3 /* WeatherData.swift */,
 				153AC551205140D9004B935E /* CurrentWeather.swift */,
+				153AC55520530275004B935E /* Location.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -116,6 +122,14 @@
 				1522A0F82051342D0061BED3 /* NetworkHandler.swift */,
 			);
 			path = Networking;
+			sourceTree = "<group>";
+		};
+		153AC55720531BD2004B935E /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				153AC55820531BE8004B935E /* Converter.swift */,
+			);
+			path = Helper;
 			sourceTree = "<group>";
 		};
 		90D3741265E719A567DF3E21 /* Frameworks */ = {
@@ -266,7 +280,9 @@
 			files = (
 				1522A0E320512A080061BED3 /* HomeViewController.swift in Sources */,
 				1522A0E120512A080061BED3 /* AppDelegate.swift in Sources */,
+				153AC55620530275004B935E /* Location.swift in Sources */,
 				153AC55420514925004B935E /* OtherViewController.swift in Sources */,
+				153AC55920531BE8004B935E /* Converter.swift in Sources */,
 				1522A0F6205130090061BED3 /* WeatherData.swift in Sources */,
 				1522A0F92051342D0061BED3 /* NetworkHandler.swift in Sources */,
 				153AC552205140D9004B935E /* CurrentWeather.swift in Sources */,
