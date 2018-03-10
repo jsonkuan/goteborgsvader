@@ -19,24 +19,15 @@ class HomeViewController: UIViewController, UIPickerViewDataSource, UIPickerView
 	
 	let networkHandler = NetworkHandler()
 	var weatherData: WeatherData?
-	
-	let majorna = Location.init(name: "Majorna", latitude: 59.6918, longitude: 11.9253)
-	let mölndal = Location.init(name: "Mölndal", latitude: 57.6552, longitude: 12.0166)
-	let hissingen = Location.init(name: "Hissingen", latitude: 57.6552, longitude: 12.0166)
-	let kåltorp = Location.init(name: "Kåltorp", latitude: 57.6552, longitude: 12.0166)
-	let linne = Location.init(name: "Linne", latitude: 57.6552, longitude: 12.0166)
-	
-	var cityAreas: [Location]!
+	let cityRegions = CityRegion()
 	
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		
-		cityAreas = [majorna, mölndal, hissingen, kåltorp, linne]
-		
 		cityRegionPickerView.delegate = self
 		cityRegionPickerView.dataSource = self
 		
-		networkHandler.getWeatherData(lat: majorna.latitude, long: majorna.longitude) { data in
+		networkHandler.getWeatherData(lat: cityRegions.allRegions[0].latitude, long: cityRegions.allRegions[0].longitude) { data in
 
 			self.weatherData = data
 			self.weatherLabel.text = data.currently.summary
@@ -60,22 +51,37 @@ class HomeViewController: UIViewController, UIPickerViewDataSource, UIPickerView
 	}
 	
 	func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-		return cityAreas.count
+		return cityRegions.allRegions.count
 	}
 	
 	func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-		return cityAreas[row].name
+		return cityRegions.allRegions[row].name
 	}
 	
 	func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-		self.navigationItem.title = cityAreas[row].name
+		self.navigationItem.title = cityRegions.allRegions[row].name
+		
+		networkHandler.getWeatherData(lat: cityRegions.allRegions[row].latitude, long: cityRegions.allRegions[row].longitude) { data in
+			self.weatherData = data
+			self.weatherLabel.text = data.currently.summary
+			
+			let converter = Converter()
+			let celcius = converter.fahrenheitToCelcius(temp: data.currently.temperature)
+			self.temperatureLabel.text = String("\(Int(celcius)) ºC")
+			
+			let precipitation = data.currently.precipProbability
+			self.chanceOfRainLabel.text = String("🌧 \(Int(precipitation * 100))% ")
+			
+			print(data.currently.icon)
+			self.setIcon(icon: data.currently.icon)
+		}
 	}
 	
 	func pickerView(_ pickerView: UIPickerView, viewForRow row: Int, forComponent component: Int, reusing view: UIView?) -> UIView {
 		var label = UILabel()
 		if let v = view as? UILabel { label = v }
 		label.font = UIFont (name: "Copperplate", size: 20)
-		label.text =  cityAreas[row].name
+		label.text =  cityRegions.allRegions[row].name
 		label.textAlignment = .center
 		label.textColor = .white
 		return label
@@ -101,8 +107,7 @@ class HomeViewController: UIViewController, UIPickerViewDataSource, UIPickerView
 		case "fog":
 			weatherIcon.image = #imageLiteral(resourceName: "foggy")
 		case "clear-day":
-			self.drinkButton.isHidden = false
-			weatherIcon.image = #imageLiteral(resourceName: "rain")
+			weatherIcon.image = #imageLiteral(resourceName: "sunny")
 		case "clear-night":
 			weatherIcon.image = #imageLiteral(resourceName: "clear night")
 		default:

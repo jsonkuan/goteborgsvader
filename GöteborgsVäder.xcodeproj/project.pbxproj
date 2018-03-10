@@ -19,6 +19,7 @@
 		153AC55420514925004B935E /* OtherViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 153AC55320514925004B935E /* OtherViewController.swift */; };
 		153AC55620530275004B935E /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 153AC55520530275004B935E /* Location.swift */; };
 		153AC55920531BE8004B935E /* Converter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 153AC55820531BE8004B935E /* Converter.swift */; };
+		153AC55B2053EE68004B935E /* CityRegion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 153AC55A2053EE68004B935E /* CityRegion.swift */; };
 		F0C5849D90EF8AD986214C1B /* Pods_Go_teborgsVa_der.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0236014E85BCFE8A3FD34336 /* Pods_Go_teborgsVa_der.framework */; };
 /* End PBXBuildFile section */
 
@@ -38,6 +39,7 @@
 		153AC55320514925004B935E /* OtherViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OtherViewController.swift; sourceTree = "<group>"; };
 		153AC55520530275004B935E /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
 		153AC55820531BE8004B935E /* Converter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Converter.swift; sourceTree = "<group>"; };
+		153AC55A2053EE68004B935E /* CityRegion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityRegion.swift; sourceTree = "<group>"; };
 		18C716403D7780FBDE39CE2C /* Pods-GöteborgsVäder.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GöteborgsVäder.release.xcconfig"; path = "Pods/Target Support Files/Pods-GöteborgsVäder/Pods-GöteborgsVäder.release.xcconfig"; sourceTree = "<group>"; };
 		2C60AF49688D64F69F5F349A /* Pods-GöteborgsVäder.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GöteborgsVäder.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GöteborgsVäder/Pods-GöteborgsVäder.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -96,6 +98,7 @@
 				1522A0F5205130090061BED3 /* WeatherData.swift */,
 				153AC551205140D9004B935E /* CurrentWeather.swift */,
 				153AC55520530275004B935E /* Location.swift */,
+				153AC55A2053EE68004B935E /* CityRegion.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -278,6 +281,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				153AC55B2053EE68004B935E /* CityRegion.swift in Sources */,
 				1522A0E320512A080061BED3 /* HomeViewController.swift in Sources */,
 				1522A0E120512A080061BED3 /* AppDelegate.swift in Sources */,
 				153AC55620530275004B935E /* Location.swift in Sources */,

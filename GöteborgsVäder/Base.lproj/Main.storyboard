@@ -56,8 +56,9 @@
                                 </constraints>
                             </pickerView>
                             <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DWm-t1-PkQ">
-                                <rect key="frame" x="129.5" y="318.5" width="116" height="30"/>
-                                <color key="backgroundColor" red="0.1215686275" green="0.12941176469999999" blue="0.14117647059999999" alpha="0.80102882919999996" colorSpace="custom" customColorSpace="sRGB"/>
+                                <rect key="frame" x="126.5" y="342" width="121" height="30"/>
+                                <color key="backgroundColor" red="1" green="0.2527923882" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
                                 <state key="normal" title="GöteborgsSkämt">
                                     <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
@@ -79,9 +80,8 @@
                             <constraint firstItem="DWm-t1-PkQ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="FTf-XM-ya2"/>
                             <constraint firstItem="uek-6G-h0g" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" symbolic="YES" id="FqJ-dg-hvC"/>
                             <constraint firstItem="ard-D7-SM7" firstAttribute="top" secondItem="aWk-Yi-Pcn" secondAttribute="bottom" constant="8" symbolic="YES" id="Mi2-3x-KyN"/>
-                            <constraint firstItem="DFe-LI-EQ3" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="N1V-5s-Dll"/>
                             <constraint firstItem="aWk-Yi-Pcn" firstAttribute="top" secondItem="6yq-fG-0ZR" secondAttribute="bottom" constant="29" id="NaJ-E9-2Kr"/>
-                            <constraint firstItem="DWm-t1-PkQ" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="U6I-JR-cas"/>
+                            <constraint firstItem="DWm-t1-PkQ" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="23.5" id="U6I-JR-cas"/>
                             <constraint firstItem="DFe-LI-EQ3" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="93" id="aBo-a1-flE"/>
                             <constraint firstItem="DFe-LI-EQ3" firstAttribute="leading" secondItem="aWk-Yi-Pcn" secondAttribute="leading" id="dSU-1p-TI8"/>
                             <constraint firstItem="aWk-Yi-Pcn" firstAttribute="trailing" secondItem="ard-D7-SM7" secondAttribute="trailing" id="ert-8O-Crg"/>
@@ -161,6 +161,11 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="eac-Kk-HQS">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <textAttributes key="titleTextAttributes">
+                            <fontDescription key="fontDescription" name="Copperplate-Bold" family="Copperplate" pointSize="40"/>
+                            <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
