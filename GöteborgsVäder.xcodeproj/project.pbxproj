@@ -83,7 +83,6 @@
 				1522A0E920512A080061BED3 /* LaunchScreen.storyboard */,
 				153AC55720531BD2004B935E /* Helper */,
 				1522A0F7205133B60061BED3 /* Networking */,
-				1522A0F320512E710061BED3 /* View */,
 				1522A0F420512E770061BED3 /* ViewController */,
 				1522A0F220512E660061BED3 /* Model */,
 				1522A0E720512A080061BED3 /* Assets.xcassets */,
@@ -101,13 +100,6 @@
 				153AC55A2053EE68004B935E /* CityRegion.swift */,
 			);
 			path = Model;
-			sourceTree = "<group>";
-		};
-		1522A0F320512E710061BED3 /* View */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = View;
 			sourceTree = "<group>";
 		};
 		1522A0F420512E770061BED3 /* ViewController */ = {

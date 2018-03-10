@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Alignment constraints to the first baseline" minToolsVersion="6.0"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -27,36 +28,12 @@
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="rain" translatesAutoresizingMaskIntoConstraints="NO" id="aWk-Yi-Pcn">
                                 <rect key="frame" x="16" y="265" width="343" height="238"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="238" id="h85-mC-d26"/>
+                                </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Temp" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uek-6G-h0g">
-                                <rect key="frame" x="299" y="208" width="60" height="25"/>
-                                <fontDescription key="fontDescription" name="Copperplate-Bold" family="Copperplate" pointSize="24"/>
-                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="% prec" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6yq-fG-0ZR">
-                                <rect key="frame" x="31" y="211" width="89" height="25"/>
-                                <fontDescription key="fontDescription" name="Copperplate-Bold" family="Copperplate" pointSize="24"/>
-                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="weather" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DFe-LI-EQ3" userLabel="City Name Label">
-                                <rect key="frame" x="16" y="157" width="343" height="46"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="46" id="Amy-Dc-9gr"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="32"/>
-                                <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ard-D7-SM7">
-                                <rect key="frame" x="16" y="511" width="343" height="136"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="136" id="cH8-mv-Nxb"/>
-                                </constraints>
-                            </pickerView>
                             <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DWm-t1-PkQ">
-                                <rect key="frame" x="126.5" y="342" width="121" height="30"/>
+                                <rect key="frame" x="127" y="342" width="121" height="30"/>
                                 <color key="backgroundColor" red="1" green="0.2527923882" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
                                 <state key="normal" title="GöteborgsSkämt">
@@ -71,32 +48,62 @@
                                     <segue destination="fRe-1y-ozX" kind="show" id="5qB-sJ-GmU"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="% prec" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6yq-fG-0ZR">
+                                <rect key="frame" x="31" y="208" width="260" height="46"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="46" id="MM2-Bb-D2N"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Copperplate-Bold" family="Copperplate" pointSize="24"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="weather" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DFe-LI-EQ3" userLabel="City Name Label">
+                                <rect key="frame" x="16" y="157" width="343" height="46"/>
+                                <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="32"/>
+                                <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ard-D7-SM7">
+                                <rect key="frame" x="16" y="511" width="343" height="136"/>
+                            </pickerView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Temp" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uek-6G-h0g">
+                                <rect key="frame" x="299" y="208" width="60" height="46"/>
+                                <fontDescription key="fontDescription" name="Copperplate-Bold" family="Copperplate" pointSize="24"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.043137254901960784" green="0.13333333333333333" blue="0.2196078431372549" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="DFe-LI-EQ3" firstAttribute="centerX" secondItem="DWm-t1-PkQ" secondAttribute="centerX" id="3I8-9c-iFh"/>
-                            <constraint firstItem="6yq-fG-0ZR" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="31" id="7qm-xn-xUc"/>
-                            <constraint firstItem="6yq-fG-0ZR" firstAttribute="top" secondItem="DFe-LI-EQ3" secondAttribute="bottom" constant="8" symbolic="YES" id="Ajy-Jb-Y9f"/>
-                            <constraint firstItem="DWm-t1-PkQ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="FTf-XM-ya2"/>
-                            <constraint firstItem="uek-6G-h0g" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" symbolic="YES" id="FqJ-dg-hvC"/>
-                            <constraint firstItem="ard-D7-SM7" firstAttribute="top" secondItem="aWk-Yi-Pcn" secondAttribute="bottom" constant="8" symbolic="YES" id="Mi2-3x-KyN"/>
-                            <constraint firstItem="aWk-Yi-Pcn" firstAttribute="top" secondItem="6yq-fG-0ZR" secondAttribute="bottom" constant="29" id="NaJ-E9-2Kr"/>
-                            <constraint firstItem="DWm-t1-PkQ" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="23.5" id="U6I-JR-cas"/>
-                            <constraint firstItem="DFe-LI-EQ3" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="93" id="aBo-a1-flE"/>
-                            <constraint firstItem="DFe-LI-EQ3" firstAttribute="leading" secondItem="aWk-Yi-Pcn" secondAttribute="leading" id="dSU-1p-TI8"/>
-                            <constraint firstItem="aWk-Yi-Pcn" firstAttribute="trailing" secondItem="ard-D7-SM7" secondAttribute="trailing" id="ert-8O-Crg"/>
-                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="6yq-fG-0ZR" secondAttribute="trailing" constant="20" symbolic="YES" id="f0l-KH-8DW"/>
-                            <constraint firstItem="DFe-LI-EQ3" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="gxN-Jj-2Ka"/>
-                            <constraint firstItem="uek-6G-h0g" firstAttribute="trailing" secondItem="aWk-Yi-Pcn" secondAttribute="trailing" id="hrB-cJ-IoV"/>
-                            <constraint firstAttribute="bottom" secondItem="ard-D7-SM7" secondAttribute="bottom" constant="20" symbolic="YES" id="jTJ-sM-0Gv"/>
-                            <constraint firstItem="aWk-Yi-Pcn" firstAttribute="top" secondItem="uek-6G-h0g" secondAttribute="bottom" constant="32" id="rGU-QW-Tl0"/>
-                            <constraint firstItem="uek-6G-h0g" firstAttribute="top" secondItem="DFe-LI-EQ3" secondAttribute="bottom" constant="5" id="x5c-5c-x6T"/>
-                            <constraint firstItem="aWk-Yi-Pcn" firstAttribute="leading" secondItem="ard-D7-SM7" secondAttribute="leading" id="xxj-gk-Lqu"/>
-                            <constraint firstItem="DFe-LI-EQ3" firstAttribute="trailing" secondItem="uek-6G-h0g" secondAttribute="trailing" id="zgn-h2-nYx"/>
+                            <constraint firstItem="6yq-fG-0ZR" firstAttribute="top" secondItem="DFe-LI-EQ3" secondAttribute="bottom" constant="5" id="365-z6-gay"/>
+                            <constraint firstItem="6yq-fG-0ZR" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="208" id="3Ub-i6-A9y"/>
+                            <constraint firstItem="aWk-Yi-Pcn" firstAttribute="top" secondItem="6yq-fG-0ZR" secondAttribute="bottom" constant="11" id="Bfd-z0-qCI"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="DFe-LI-EQ3" secondAttribute="trailing" constant="16" id="Buh-zm-N11"/>
+                            <constraint firstItem="DFe-LI-EQ3" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="DNT-Qp-L7p"/>
+                            <constraint firstItem="6yq-fG-0ZR" firstAttribute="firstBaseline" secondItem="uek-6G-h0g" secondAttribute="firstBaseline" id="Fyv-b7-CBl"/>
+                            <constraint firstItem="uek-6G-h0g" firstAttribute="trailing" secondItem="aWk-Yi-Pcn" secondAttribute="trailing" id="HLM-8R-X1y"/>
+                            <constraint firstItem="DWm-t1-PkQ" firstAttribute="top" secondItem="uek-6G-h0g" secondAttribute="bottom" constant="88" id="Hzm-A9-6nQ"/>
+                            <constraint firstItem="uek-6G-h0g" firstAttribute="trailing" secondItem="DFe-LI-EQ3" secondAttribute="trailing" id="NjH-eu-UZN"/>
+                            <constraint firstItem="uek-6G-h0g" firstAttribute="leading" secondItem="6yq-fG-0ZR" secondAttribute="trailing" constant="8" symbolic="YES" id="WKh-Y3-wXG"/>
+                            <constraint firstItem="ard-D7-SM7" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="ZdP-oA-KpK"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="ard-D7-SM7" secondAttribute="bottom" constant="20" id="aPB-fT-vJ1"/>
+                            <constraint firstItem="DFe-LI-EQ3" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="93" id="bCL-6W-H2W"/>
+                            <constraint firstItem="ard-D7-SM7" firstAttribute="top" secondItem="aWk-Yi-Pcn" secondAttribute="bottom" constant="8" symbolic="YES" id="e5q-co-SFV"/>
+                            <constraint firstItem="6yq-fG-0ZR" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="31" id="fT3-fA-Kvn"/>
+                            <constraint firstItem="aWk-Yi-Pcn" firstAttribute="leading" secondItem="DFe-LI-EQ3" secondAttribute="leading" id="hkv-Ua-Wkh"/>
+                            <constraint firstItem="6yq-fG-0ZR" firstAttribute="baseline" secondItem="uek-6G-h0g" secondAttribute="baseline" id="kKX-Q2-U7j"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ard-D7-SM7" secondAttribute="trailing" constant="16" id="ofH-YO-SbH"/>
+                            <constraint firstItem="aWk-Yi-Pcn" firstAttribute="centerX" secondItem="DWm-t1-PkQ" secondAttribute="centerX" id="stQ-zH-OYK"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Majorna" id="VKV-6Y-bcx"/>
+                    <navigationItem key="navigationItem" title="Majorna" id="VKV-6Y-bcx">
+                        <barButtonItem key="rightBarButtonItem" image="location icon" id="PCZ-JN-uOF">
+                            <connections>
+                                <segue destination="vr2-gM-NBr" kind="show" id="YFo-uw-93E"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="chanceOfRainLabel" destination="6yq-fG-0ZR" id="J20-Ry-ofS"/>
                         <outlet property="cityRegionPickerView" destination="ard-D7-SM7" id="BTC-tB-l82"/>
@@ -108,7 +115,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="475.5" y="133.5"/>
+            <point key="canvasLocation" x="474.39999999999998" y="132.68365817091455"/>
         </scene>
         <!--Other View Controller-->
         <scene sceneID="8RC-Jd-Xvz">
@@ -151,7 +158,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Rf2-8v-XEx" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1196" y="133.5832083958021"/>
+            <point key="canvasLocation" x="1292" y="339"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="HH5-6q-s9H">
@@ -161,6 +168,7 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="eac-Kk-HQS">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <color key="barTintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <textAttributes key="titleTextAttributes">
                             <fontDescription key="fontDescription" name="Copperplate-Bold" family="Copperplate" pointSize="40"/>
@@ -174,10 +182,38 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oce-Th-jfx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-279" y="134"/>
+            <point key="canvasLocation" x="-61" y="133"/>
+        </scene>
+        <!--Other View Controller-->
+        <scene sceneID="7NQ-ZC-Fdb">
+            <objects>
+                <viewController id="vr2-gM-NBr" userLabel="Other View Controller" customClass="OtherViewController" customModule="Go_teborgsVa_der" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="wq5-yx-OXM">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="fakemap" translatesAutoresizingMaskIntoConstraints="NO" id="mfE-0a-qLi">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.043137254899999998" green="0.1333333333" blue="0.21960784310000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="mfE-0a-qLi" firstAttribute="leading" secondItem="wq5-yx-OXM" secondAttribute="leading" id="E0u-80-LIM"/>
+                            <constraint firstItem="mfE-0a-qLi" firstAttribute="top" secondItem="yDT-G8-g2Y" secondAttribute="top" id="Rcx-13-L6s"/>
+                            <constraint firstAttribute="trailing" secondItem="mfE-0a-qLi" secondAttribute="trailing" id="vVr-eM-uWE"/>
+                            <constraint firstItem="mfE-0a-qLi" firstAttribute="bottom" secondItem="yDT-G8-g2Y" secondAttribute="bottom" id="xX4-fh-j0z"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="yDT-G8-g2Y"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0Lq-nL-nUw" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1292" y="-373.76311844077964"/>
         </scene>
     </scenes>
     <resources>
+        <image name="fakemap" width="1125" height="2436"/>
+        <image name="location icon" width="21" height="26"/>
         <image name="rain" width="380" height="337"/>
         <image name="umbrella drink" width="304" height="491"/>
     </resources>

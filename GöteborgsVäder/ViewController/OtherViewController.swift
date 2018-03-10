@@ -17,7 +17,6 @@ class OtherViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 		
-//		self.weatherLabel.text = "hej: \(weatherData.latitude)"
     }
 	
 }

@@ -28,18 +28,7 @@ class HomeViewController: UIViewController, UIPickerViewDataSource, UIPickerView
 		cityRegionPickerView.dataSource = self
 		
 		networkHandler.getWeatherData(lat: cityRegions.allRegions[0].latitude, long: cityRegions.allRegions[0].longitude) { data in
-
-			self.weatherData = data
-			self.weatherLabel.text = data.currently.summary
-			
-			let converter = Converter()
-			let celcius = converter.fahrenheitToCelcius(temp: data.currently.temperature)
-			self.temperatureLabel.text = String("\(Int(celcius)) ºC")
-			
-			let precipitation = data.currently.precipProbability
-			self.chanceOfRainLabel.text = String("🌧 \(Int(precipitation * 100))% ")
-			
-			print(data.currently.icon)
+			self.configViewFor(data: data)
 			self.setIcon(icon: data.currently.icon)
 		}
 	}
@@ -62,17 +51,7 @@ class HomeViewController: UIViewController, UIPickerViewDataSource, UIPickerView
 		self.navigationItem.title = cityRegions.allRegions[row].name
 		
 		networkHandler.getWeatherData(lat: cityRegions.allRegions[row].latitude, long: cityRegions.allRegions[row].longitude) { data in
-			self.weatherData = data
-			self.weatherLabel.text = data.currently.summary
-			
-			let converter = Converter()
-			let celcius = converter.fahrenheitToCelcius(temp: data.currently.temperature)
-			self.temperatureLabel.text = String("\(Int(celcius)) ºC")
-			
-			let precipitation = data.currently.precipProbability
-			self.chanceOfRainLabel.text = String("🌧 \(Int(precipitation * 100))% ")
-			
-			print(data.currently.icon)
+			self.configViewFor(data: data)
 			self.setIcon(icon: data.currently.icon)
 		}
 	}
@@ -90,6 +69,9 @@ class HomeViewController: UIViewController, UIPickerViewDataSource, UIPickerView
 	// MARK: - Private helper methods
 	
 	private func setIcon(icon: String) {
+		
+		self.drinkButton.isHidden = true
+		
 		switch icon {
 		case "snow", "sleet":
 			weatherIcon.image = #imageLiteral(resourceName: "snow")
@@ -112,8 +94,19 @@ class HomeViewController: UIViewController, UIPickerViewDataSource, UIPickerView
 			weatherIcon.image = #imageLiteral(resourceName: "clear night")
 		default:
 			weatherIcon.image = #imageLiteral(resourceName: "rain_icon")
-			self.drinkButton.isHidden = true
 		}
+	}
+	
+	private func configViewFor(data: WeatherData) {
+		self.weatherData = data
+		self.weatherLabel.text = data.currently.summary
+		
+		let converter = Converter()
+		let celcius = converter.fahrenheitToCelcius(temp: data.currently.temperature)
+		self.temperatureLabel.text = String("\(Int(celcius)) ºC")
+		
+		let precipitation = data.currently.precipProbability
+		self.chanceOfRainLabel.text = String("🌧 \(Int(precipitation * 100))% ")
 	}
 
 	
