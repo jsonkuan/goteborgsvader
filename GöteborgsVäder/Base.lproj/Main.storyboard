@@ -17,7 +17,7 @@
         </array>
     </customFonts>
     <scenes>
-        <!--Home View Controller-->
+        <!--Majorna-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="HomeViewController" customModule="Go_teborgsVa_der" customModuleProvider="target" sceneMemberID="viewController">
@@ -26,15 +26,39 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="rain" translatesAutoresizingMaskIntoConstraints="NO" id="aWk-Yi-Pcn">
-                                <rect key="frame" x="16" y="264.5" width="343" height="257.5"/>
+                                <rect key="frame" x="16" y="265" width="343" height="238"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DWm-t1-PkQ">
-                                <rect key="frame" x="115" y="568" width="145" height="30"/>
-                                <color key="backgroundColor" red="0.1215686275" green="0.12941176469999999" blue="0.14117647059999999" alpha="0.80102882919999996" colorSpace="custom" customColorSpace="sRGB"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Temp" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uek-6G-h0g">
+                                <rect key="frame" x="299" y="208" width="60" height="25"/>
+                                <fontDescription key="fontDescription" name="Copperplate-Bold" family="Copperplate" pointSize="24"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="% prec" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6yq-fG-0ZR">
+                                <rect key="frame" x="31" y="211" width="89" height="25"/>
+                                <fontDescription key="fontDescription" name="Copperplate-Bold" family="Copperplate" pointSize="24"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="weather" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DFe-LI-EQ3" userLabel="City Name Label">
+                                <rect key="frame" x="16" y="157" width="343" height="46"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="FcM-cG-40K"/>
+                                    <constraint firstAttribute="height" constant="46" id="Amy-Dc-9gr"/>
                                 </constraints>
-                                <state key="normal" title="Drink förslag">
+                                <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="32"/>
+                                <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ard-D7-SM7">
+                                <rect key="frame" x="16" y="511" width="343" height="136"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="136" id="cH8-mv-Nxb"/>
+                                </constraints>
+                            </pickerView>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DWm-t1-PkQ">
+                                <rect key="frame" x="129.5" y="318.5" width="116" height="30"/>
+                                <color key="backgroundColor" red="0.1215686275" green="0.12941176469999999" blue="0.14117647059999999" alpha="0.80102882919999996" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="GöteborgsSkämt">
                                     <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <userDefinedRuntimeAttributes>
@@ -46,51 +70,37 @@
                                     <segue destination="fRe-1y-ozX" kind="show" id="5qB-sJ-GmU"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Temp" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uek-6G-h0g">
-                                <rect key="frame" x="299" y="208" width="60" height="24.5"/>
-                                <fontDescription key="fontDescription" name="Copperplate-Bold" family="Copperplate" pointSize="24"/>
-                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="% prec" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6yq-fG-0ZR">
-                                <rect key="frame" x="31" y="211" width="89" height="24.5"/>
-                                <fontDescription key="fontDescription" name="Copperplate-Bold" family="Copperplate" pointSize="24"/>
-                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="City Name" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DFe-LI-EQ3" userLabel="City Name Label">
-                                <rect key="frame" x="16" y="157" width="343" height="46"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="46" id="b6Y-Sp-aSL"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="32"/>
-                                <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
-                        <color key="backgroundColor" red="0.0" green="0.23921568627450979" blue="0.36862745098039218" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.043137254901960784" green="0.13333333333333333" blue="0.2196078431372549" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="DFe-LI-EQ3" firstAttribute="leading" secondItem="aWk-Yi-Pcn" secondAttribute="leading" id="4MU-FD-aii"/>
-                            <constraint firstItem="DFe-LI-EQ3" firstAttribute="trailing" secondItem="uek-6G-h0g" secondAttribute="trailing" id="CgZ-y4-9tM"/>
-                            <constraint firstItem="DFe-LI-EQ3" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="KJX-aU-qjq"/>
-                            <constraint firstItem="uek-6G-h0g" firstAttribute="trailing" secondItem="aWk-Yi-Pcn" secondAttribute="trailing" id="Kx7-PJ-bfx"/>
-                            <constraint firstItem="aWk-Yi-Pcn" firstAttribute="top" secondItem="uek-6G-h0g" secondAttribute="bottom" constant="32" id="PsM-zL-DO8"/>
-                            <constraint firstItem="DWm-t1-PkQ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="115" id="aWQ-qO-QYJ"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="DWm-t1-PkQ" secondAttribute="bottom" constant="69" id="bSh-0t-dPH"/>
-                            <constraint firstItem="DWm-t1-PkQ" firstAttribute="top" secondItem="aWk-Yi-Pcn" secondAttribute="bottom" constant="46" id="dDU-Df-Y9H"/>
-                            <constraint firstItem="DFe-LI-EQ3" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="dHL-8Q-Erw"/>
-                            <constraint firstItem="aWk-Yi-Pcn" firstAttribute="centerX" secondItem="DWm-t1-PkQ" secondAttribute="centerX" id="hcZ-tZ-aYR"/>
-                            <constraint firstItem="aWk-Yi-Pcn" firstAttribute="top" secondItem="6yq-fG-0ZR" secondAttribute="bottom" constant="29" id="nzl-I7-Pwr"/>
-                            <constraint firstItem="DFe-LI-EQ3" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="93" id="qPQ-Pj-BVU"/>
-                            <constraint firstItem="uek-6G-h0g" firstAttribute="top" secondItem="DFe-LI-EQ3" secondAttribute="bottom" constant="5" id="sVl-w7-06o"/>
-                            <constraint firstItem="6yq-fG-0ZR" firstAttribute="top" secondItem="DFe-LI-EQ3" secondAttribute="bottom" constant="8" symbolic="YES" id="t64-Ka-NV8"/>
-                            <constraint firstItem="6yq-fG-0ZR" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="31" id="wXh-iq-9pd"/>
+                            <constraint firstItem="DFe-LI-EQ3" firstAttribute="centerX" secondItem="DWm-t1-PkQ" secondAttribute="centerX" id="3I8-9c-iFh"/>
+                            <constraint firstItem="6yq-fG-0ZR" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="31" id="7qm-xn-xUc"/>
+                            <constraint firstItem="6yq-fG-0ZR" firstAttribute="top" secondItem="DFe-LI-EQ3" secondAttribute="bottom" constant="8" symbolic="YES" id="Ajy-Jb-Y9f"/>
+                            <constraint firstItem="DWm-t1-PkQ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="FTf-XM-ya2"/>
+                            <constraint firstItem="uek-6G-h0g" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" symbolic="YES" id="FqJ-dg-hvC"/>
+                            <constraint firstItem="ard-D7-SM7" firstAttribute="top" secondItem="aWk-Yi-Pcn" secondAttribute="bottom" constant="8" symbolic="YES" id="Mi2-3x-KyN"/>
+                            <constraint firstItem="DFe-LI-EQ3" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="N1V-5s-Dll"/>
+                            <constraint firstItem="aWk-Yi-Pcn" firstAttribute="top" secondItem="6yq-fG-0ZR" secondAttribute="bottom" constant="29" id="NaJ-E9-2Kr"/>
+                            <constraint firstItem="DWm-t1-PkQ" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="U6I-JR-cas"/>
+                            <constraint firstItem="DFe-LI-EQ3" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="93" id="aBo-a1-flE"/>
+                            <constraint firstItem="DFe-LI-EQ3" firstAttribute="leading" secondItem="aWk-Yi-Pcn" secondAttribute="leading" id="dSU-1p-TI8"/>
+                            <constraint firstItem="aWk-Yi-Pcn" firstAttribute="trailing" secondItem="ard-D7-SM7" secondAttribute="trailing" id="ert-8O-Crg"/>
+                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="6yq-fG-0ZR" secondAttribute="trailing" constant="20" symbolic="YES" id="f0l-KH-8DW"/>
+                            <constraint firstItem="DFe-LI-EQ3" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="gxN-Jj-2Ka"/>
+                            <constraint firstItem="uek-6G-h0g" firstAttribute="trailing" secondItem="aWk-Yi-Pcn" secondAttribute="trailing" id="hrB-cJ-IoV"/>
+                            <constraint firstAttribute="bottom" secondItem="ard-D7-SM7" secondAttribute="bottom" constant="20" symbolic="YES" id="jTJ-sM-0Gv"/>
+                            <constraint firstItem="aWk-Yi-Pcn" firstAttribute="top" secondItem="uek-6G-h0g" secondAttribute="bottom" constant="32" id="rGU-QW-Tl0"/>
+                            <constraint firstItem="uek-6G-h0g" firstAttribute="top" secondItem="DFe-LI-EQ3" secondAttribute="bottom" constant="5" id="x5c-5c-x6T"/>
+                            <constraint firstItem="aWk-Yi-Pcn" firstAttribute="leading" secondItem="ard-D7-SM7" secondAttribute="leading" id="xxj-gk-Lqu"/>
+                            <constraint firstItem="DFe-LI-EQ3" firstAttribute="trailing" secondItem="uek-6G-h0g" secondAttribute="trailing" id="zgn-h2-nYx"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <navigationItem key="navigationItem" id="VKV-6Y-bcx"/>
+                    <navigationItem key="navigationItem" title="Majorna" id="VKV-6Y-bcx"/>
                     <connections>
                         <outlet property="chanceOfRainLabel" destination="6yq-fG-0ZR" id="J20-Ry-ofS"/>
+                        <outlet property="cityRegionPickerView" destination="ard-D7-SM7" id="BTC-tB-l82"/>
+                        <outlet property="drinkButton" destination="DWm-t1-PkQ" id="6da-Rf-vwn"/>
                         <outlet property="temperatureLabel" destination="uek-6G-h0g" id="8by-aH-rab"/>
                         <outlet property="weatherIcon" destination="aWk-Yi-Pcn" id="LT5-P7-4Ct"/>
                         <outlet property="weatherLabel" destination="DFe-LI-EQ3" id="nWb-2e-w0o"/>
@@ -98,7 +108,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="476" y="133.5832083958021"/>
+            <point key="canvasLocation" x="475.5" y="133.5"/>
         </scene>
         <!--Other View Controller-->
         <scene sceneID="8RC-Jd-Xvz">
@@ -108,16 +118,30 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="umbrella drink green" translatesAutoresizingMaskIntoConstraints="NO" id="mg6-c3-mFE">
-                                <rect key="frame" x="16" y="64" width="343" height="583"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Regnar det? Ta en paraplydrink!" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cEi-Ev-ym0">
+                                <rect key="frame" x="16" y="563" width="343" height="56"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="56" id="9RF-hL-Tck"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Copperplate-Bold" family="Copperplate" pointSize="24"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="umbrella drink" translatesAutoresizingMaskIntoConstraints="NO" id="mg6-c3-mFE">
+                                <rect key="frame" x="16" y="114" width="343" height="406"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="406" id="g7U-fP-laK"/>
+                                </constraints>
                             </imageView>
                         </subviews>
-                        <color key="backgroundColor" red="0.0" green="0.23921568627450979" blue="0.36862745098039218" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.043137254901960784" green="0.13333333333333333" blue="0.2196078431372549" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstAttribute="bottom" secondItem="mg6-c3-mFE" secondAttribute="bottom" constant="20" symbolic="YES" id="GO2-wF-xII"/>
-                            <constraint firstItem="mg6-c3-mFE" firstAttribute="top" secondItem="6qc-PZ-q0P" secondAttribute="top" id="II6-xF-H7g"/>
-                            <constraint firstItem="mg6-c3-mFE" firstAttribute="leading" secondItem="xkc-x4-zPb" secondAttribute="leadingMargin" id="asA-jo-zV8"/>
-                            <constraint firstItem="mg6-c3-mFE" firstAttribute="trailing" secondItem="xkc-x4-zPb" secondAttribute="trailingMargin" id="cnW-Vs-s8k"/>
+                            <constraint firstItem="cEi-Ev-ym0" firstAttribute="top" secondItem="mg6-c3-mFE" secondAttribute="bottom" constant="43" id="LRl-VD-fEG"/>
+                            <constraint firstItem="mg6-c3-mFE" firstAttribute="leading" secondItem="xkc-x4-zPb" secondAttribute="leadingMargin" id="eBX-K8-gkA"/>
+                            <constraint firstItem="mg6-c3-mFE" firstAttribute="leading" secondItem="cEi-Ev-ym0" secondAttribute="leading" id="n3v-cU-fw8"/>
+                            <constraint firstItem="mg6-c3-mFE" firstAttribute="trailing" secondItem="cEi-Ev-ym0" secondAttribute="trailing" id="r1v-t9-fYF"/>
+                            <constraint firstItem="mg6-c3-mFE" firstAttribute="trailing" secondItem="xkc-x4-zPb" secondAttribute="trailingMargin" id="tnT-AI-NOT"/>
+                            <constraint firstItem="mg6-c3-mFE" firstAttribute="top" secondItem="6qc-PZ-q0P" secondAttribute="top" constant="50" id="y8T-oR-xLX"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6qc-PZ-q0P"/>
                     </view>
@@ -150,6 +174,6 @@
     </scenes>
     <resources>
         <image name="rain" width="380" height="337"/>
-        <image name="umbrella drink green" width="304" height="491"/>
+        <image name="umbrella drink" width="304" height="491"/>
     </resources>
 </document>

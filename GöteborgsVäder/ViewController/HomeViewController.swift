@@ -8,25 +8,38 @@
 
 import UIKit
 
-class HomeViewController: UIViewController {
-
+class HomeViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate {
+	
 	@IBOutlet weak var weatherIcon: UIImageView!
 	@IBOutlet weak var weatherLabel: UILabel!
 	@IBOutlet weak var temperatureLabel: UILabel!
 	@IBOutlet weak var chanceOfRainLabel: UILabel!
+	@IBOutlet weak var drinkButton: UIButton!
+	@IBOutlet weak var cityRegionPickerView: UIPickerView!
 	
 	let networkHandler = NetworkHandler()
 	var weatherData: WeatherData?
 	
+	let majorna = Location.init(name: "Majorna", latitude: 59.6918, longitude: 11.9253)
+	let mölndal = Location.init(name: "Mölndal", latitude: 57.6552, longitude: 12.0166)
+	let hissingen = Location.init(name: "Hissingen", latitude: 57.6552, longitude: 12.0166)
+	let kåltorp = Location.init(name: "Kåltorp", latitude: 57.6552, longitude: 12.0166)
+	let linne = Location.init(name: "Linne", latitude: 57.6552, longitude: 12.0166)
+	
+	var cityAreas: [Location]!
+	
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		
-		let majorna = Location.init(name: "Majorna", latitude: 59.6918, longitude: 11.9253)
-		let mölndal = Location.init(name: "mölndal", latitude: 57.6552, longitude: 12.0166)
+		cityAreas = [majorna, mölndal, hissingen, kåltorp, linne]
+		
+		cityRegionPickerView.delegate = self
+		cityRegionPickerView.dataSource = self
 		
 		networkHandler.getWeatherData(lat: majorna.latitude, long: majorna.longitude) { data in
-			self.weatherLabel.text = majorna.name
+
 			self.weatherData = data
+			self.weatherLabel.text = data.currently.summary
 			
 			let converter = Converter()
 			let celcius = converter.fahrenheitToCelcius(temp: data.currently.temperature)
@@ -40,6 +53,34 @@ class HomeViewController: UIViewController {
 		}
 	}
 	
+	// MARK: - UIPickerView
+	
+	func numberOfComponents(in pickerView: UIPickerView) -> Int {
+		return 1
+	}
+	
+	func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+		return cityAreas.count
+	}
+	
+	func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+		return cityAreas[row].name
+	}
+	
+	func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+		self.navigationItem.title = cityAreas[row].name
+	}
+	
+	func pickerView(_ pickerView: UIPickerView, viewForRow row: Int, forComponent component: Int, reusing view: UIView?) -> UIView {
+		var label = UILabel()
+		if let v = view as? UILabel { label = v }
+		label.font = UIFont (name: "Copperplate", size: 20)
+		label.text =  cityAreas[row].name
+		label.textAlignment = .center
+		label.textColor = .white
+		return label
+	}
+	
 	// MARK: - Private helper methods
 	
 	private func setIcon(icon: String) {
@@ -48,22 +89,25 @@ class HomeViewController: UIViewController {
 			weatherIcon.image = #imageLiteral(resourceName: "snow")
 		case "rain":
 			weatherIcon.image = #imageLiteral(resourceName: "rain")
+			self.drinkButton.isHidden = false
 		case "cloudy":
 			weatherIcon.image = #imageLiteral(resourceName: "cloudy")
 		case "partly-cloudy-day":
-			weatherIcon.image = #imageLiteral(resourceName: "partly_cloudy_day")
+			weatherIcon.image = #imageLiteral(resourceName: "partly cloudy day")
 		case "partly-cloudy-night":
-			weatherIcon.image = #imageLiteral(resourceName: "partly_cloudy_night")
+			weatherIcon.image = #imageLiteral(resourceName: "partly cloudy night")
 		case "wind":
 			weatherIcon.image = #imageLiteral(resourceName: "windy")
 		case "fog":
 			weatherIcon.image = #imageLiteral(resourceName: "foggy")
 		case "clear-day":
-			weatherIcon.image = #imageLiteral(resourceName: "sunny")
+			self.drinkButton.isHidden = false
+			weatherIcon.image = #imageLiteral(resourceName: "rain")
 		case "clear-night":
-			weatherIcon.image = #imageLiteral(resourceName: "clear_night")
+			weatherIcon.image = #imageLiteral(resourceName: "clear night")
 		default:
 			weatherIcon.image = #imageLiteral(resourceName: "rain_icon")
+			self.drinkButton.isHidden = true
 		}
 	}
 
